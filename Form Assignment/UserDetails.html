@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Details</title>
+</head>
+<body>
+	<center>
+		<h1>User Details</h1>
+		
+		<style>
+			body{
+				background: #FAEBD7
+			}
+			.button1{background-color: #008CBA;}
+		</style>
+		
+			
+			<form name="form1" method="POST">
+				<table align="center" cellpadding = "10">
+					<tr>
+						<td>Full Name</td>
+						<td>
+							<input type="text" name="fullname" placeholder="Full Name" maxlength="30">
+						</td>
+					</tr>
+					<tr>
+						<td>Address</td>
+						<td><textarea placeholder="Enter Address Here"></textarea></td>
+					</tr>
+					<tr>
+						<td>Subject of Book</td>
+						<td>
+							<input type="Radio" name="book" checked id="bid1"><label for="bid1">Wings of Fire</label>
+							<input type="Radio" name="book" id="bid2"><label for="bid2">Game Of Thrones</label>
+							<input type="Radio" name="book" id="bid3"><label for="bid3">Harry Potter</label>
+
+						</td>
+					</tr>
+					
+					<tr>
+						<td>Favourite Author</td>
+						<td>
+							<select>
+								<option value="1">APJ Abdul Kalam</option>
+								<option value="2">George R. R. Martin</option>
+								<option value="3">J.K Rowling</option>
+								
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Feedback</td>
+						<td><textarea placeholder="Enter Feedback Here"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input class="button1" type="submit" name="submit" value="Submit">
+		  					<button class="button1" type="Reset" value="reset">Reset</button>
+						</td>
+					</tr>
+					
+
+					
+						
+				</table>
+			</form>
+		
+	</center>
+
+</body>
+</html>

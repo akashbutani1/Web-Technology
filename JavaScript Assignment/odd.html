@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Odd Char</title>
+</head>
+<body>
+	<script type="text/javascript">
+		 var str = prompt("Enter a string");
+		 var len = str.length;
+		 //document.write(str);
+		 //document.write("\n");
+		 //document.write(len);
+		 var char = new Array();
+		 char = str.split('');
+		 document.write("char at odd positions : ");
+		 for (var i = 0; i <=len; i++) {
+		 	if(i%2==1){
+		 		document.write(char[i-1]);
+		 		document.write("\n");
+		 	}
+		 	
+		 }
+	</script>
+</body>
+</html>

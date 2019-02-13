@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num = prompt("enter 2 digit Number");
+		var arr = new Array();
+		arr = num.split('');
+		var sum=0;
+		for (var i = 1; i <= arr[1]; i++) {
+			
+			sum = sum + arr[0]*arr[0];
+		}
+		document.write("Answer is : " + sum);
+	</script>
+</body>
+</html>

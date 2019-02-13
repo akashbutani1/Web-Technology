@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var username,pass,bdate,email,phno;
+		
+		function testResults () {
+                var username = document.forms["form1"]["username"];
+                var pass = document.forms["form1"]["pass"];
+                var bdate = document.forms["form1"]["bdate"];
+                var email = document.forms["form1"]["email"];
+                var phno = document.forms["form1"]["phno"];
+        
+            var count = 0;
+
+		//phone Number
+		var phno1 = phno.charAt(0);
+		if(phno1!=9 && phno1!=8){
+			window.alert("Mobile No should start from 9 or 8");
+			window.alert("\n");
+            return false;
+		}
+
+		//email
+		var emailArr = new Array();
+		emailArr = email.split('');
+		for (var i = 0; i <= email.length; i++) {
+			if(emailArr[i] == '@' || emailArr[0] == '.'){
+				count=0;
+                return false;
+			}
+			else{
+				count++;
+			}
+		}
+		if(count!=0){
+			window.alert("Invalid Email");
+			window.alert("\n");
+            return false;
+		}
+
+		//password
+		var len = pass.length;
+		if(len<=5 && len>12){
+			window.alert("Password must contain 6 to 12 character");
+			window.alert("\n");
+            return false;
+		}
+		count=0;
+		for(var i=0 ; i<pass.length; i++)
+            {
+				var j = pass.codePointAt(i);
+                if((j<48 && j>32) || (j>57 && j<65) || (j>90 && j<97))
+                {
+                     count++;  
+                    return false;
+               
+                }
+            }
+                
+            
+              if(count>=1){
+                   return false;
+            }
+            else{
+            	window.alert("Atleast 1 special char needed");
+            }
+
+		//username
+		var z = username.codePointAt(0);
+		if((j<48 && j>32) || (j>57 && j<65) || (j>90 && j<97))
+                {
+                    if(j>47 && j<58){
+                     count++;  
+                        return false;
+                    }
+               
+                }
+            
+                
+            
+              if(count==0){
+                   return false;
+            }
+            else{
+            	window.alert("Username must not contain special char at start");
+            }
+
+		//all field must not empty
+
+        
+}
+        
+		
+
+	</script>
+	<form name="form1" method="post" onsubmit="return testResults()">
+		Username:<input type="text" name="username" id="username"><br>
+		Email:<input type="text" name="email" id="email"><br>
+        Password:<input type="password" name="pass" id="pass"><br>
+        Phone No:<input type="number" name="phno" id="phno"><br>
+        Birthdate:<input type="text" name="bdate" id="bdate" placeholder="4/11/1998"><br>
+		<input type="submit" name="submit" value="Submit" >
+	
+	</form>
+	
+</body>
+</html>
